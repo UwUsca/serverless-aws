@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "serverless-python-requirements": "^6.1.0"
+  },
+  "dependencies": {
+    "pymysql": "^1.0.0"
+  }
+}
