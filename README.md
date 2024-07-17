@@ -17,16 +17,20 @@
 # Como usar
 1. Configure as variáveis de ambiente necessárias:
 > export BUCKET_NAME={name}
+
 > export DB_HOST={host}
+
 > export DB_USER={user}
+
 > export DB_PASSWORD={password}
+
 > export DB_NAME={db_name}
 
 2. Deploy das funções Lambda e Step Function utilizando o Serverless Framework:
 > serverless deploy
 
 3. Execute a Step Function para iniciar o processamento:
-> aws stepfunctions start-execution --state-machine-name NomeDaSuaStateMachine --input '{"road_name": "Via Araucaria"}'
+> aws stepfunctions start-execution --state-machine-name processCSVStateMachine --input '{"road_name": "Via Araucaria"}'
 
 4. Acompanhe o progresso e verifique os logs:
 > serverless logs --function lambda1 --tail
